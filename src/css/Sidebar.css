@@ -20,3 +20,10 @@
     font-size: 12px;
 
 }
+
+.spotify__logo{
+    height: 65px;
+    padding: 10px;
+    padding-top:0px;
+    margin-right: auto;
+}

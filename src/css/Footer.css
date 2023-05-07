@@ -1,15 +1,77 @@
 .footer{
     position: fixed;
+    display: flex;
+    justify-content: space-between;
+    /* color: white; */
     bottom: 0;
-    background-color: rgb(39, 39, 39);
-    width: 100%;
-    height: 65px;
+    background-color: rgb(19, 18, 18);
+    width: 97%;
+    height: 63px;
     padding: 20px;
 }
 
-.spotify__logo{
-    height: 65px;
-    padding: 10px;
-    padding-top:0px;
-    margin-right: auto;
+.footer__left{
+    flex: 0.3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 300px;
+}
+
+
+.footer__albumlogo{
+    width: 80px;
+    height: 90px;
+    object-fit: contain;
+    margin-right: 20px;
+}
+.footer__albumlogo__title{
+    color: white;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.footer__albumlogo__title > h4{
+    font-family:cursive;
+    margin-bottom: 5px;
+}
+
+.footer__albumlogo__title > p{
+    font-size: 12px;
+}
+
+
+
+.footer__center{
+    flex: 0.4;
+    padding: 0 100px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 300px;
+
+}
+
+.footer__right{
+    flex: 0.3;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 300px;
+}
+
+.footer__green{
+    color: rgb(22, 255, 22);
+}
+
+.footer__icon:hover,
+.footer__green:hover {
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.2) !important;
+}
+
+.footer__right * .MuiSlider-root{
+    color: rgb(184, 255, 230);
 }

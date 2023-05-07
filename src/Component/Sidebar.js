@@ -4,12 +4,15 @@ import SidebarOption from './SidebarOption';
 import HomeIcon from '@mui/icons-material/HomeSharp';
 import SearchIcon from '@mui/icons-material/Search';
 import LibraryIcon from '@mui/icons-material/LibraryMusic';
+import { useStateProvider } from '../StateProvider';
 
 
 const Sidebar =()=> {
+    const [{playLists}, dispatch] = useStateProvider();
+    console.log("Playlists are ", playLists);
     return(
         <div className='sidebar'>
-            <img src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg"
+            <img alt="images" src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg"
                 className='spotify__logo' />
         <SidebarOption Icon={HomeIcon} title="Home"/>
         <SidebarOption Icon={SearchIcon} title="Search" />
@@ -19,9 +22,9 @@ const Sidebar =()=> {
         <strong className='sidebar__title'>PLAYLIST</strong>
         <hr />
 
-        <SidebarOption title='HIp-Hop' />
-        <SidebarOption title='Blues' />
-        <SidebarOption title='Reggea' />
+        {playLists?.items?.map(playlist => (
+            <SidebarOption title={playlist.title} />
+        ))}
         </div>
     )
 }

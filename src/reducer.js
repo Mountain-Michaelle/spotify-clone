@@ -1,10 +1,10 @@
 export const initialState = {
     user: null,
-    playList: [],
+    playLists: [],
     playing: false,
     item: null,
     //Remove after development!
-    token: 'BQBfMbCCv56eVsTCxEka_wiWKAaY1GYmz2poyXGfcWyChgBcHjs53jSXqkPyc6kEhK1gmUb_LYVCcPbtnm24jYrobHJg5AbIaskcxZuwseflwRYngQY9tIc0Z2SPX1fB4r0jB3IS6wzBPzY-QhEvwhgjzuH70hRReTnfGfi3pZ853HlE6noaS7S75ToquUJ6VkbR',
+    token: 'BQCTN2LFgkclskhjos3_RvobUDvny6vvha1rnFlg_FJHUSkinxhSA_3spfH_cuYNbidVYce_PKEYDXx4K4OUFtYcpaw2m3Jt0L-QU1FMh7tHnhjAkPzTUm7KrZi-9Lyg25ku0F132padB-7jd9jnKiv98cSw3KhOkKhjY59ux7SedfWsVRi06jhv9jpzdyK7An2V',
 };
 
 export const reducer = (state, action) => {
@@ -20,6 +20,11 @@ switch(action.type){
         return{
             ...state,
             token: action.token,
+        }
+    case 'SET_PLAYLISTS':
+        return{
+            ...state, 
+            playLists: action.playLists
         }
     default:
         return state;
